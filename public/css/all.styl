@@ -1,0 +1,139 @@
+flex()
+    display -webkit-box
+    display -webkit-flex
+    display -ms-flexbox
+    display flex
+flex-align-center()
+    -webkit-box-align center
+    -webkit-align-items center
+    -ms-flex-align center
+    align-items center
+flex-justify-center()
+    -webkit-box-pack center
+    -webkit-justify-content center
+    -ms-flex-pack center
+    justify-content center
+flex-justify-pack()
+    -webkit-box-pack justify
+    -webkit-justify-content space-between
+    -ms-flex-pack justify
+    justify-content space-between
+flex-justify-around()
+    -webkit-justify-content space-around
+    justify-content space-around
+flex-x(x)
+    flex-grow x
+    flex-shrink x
+transitionAll3()
+    transition all 0.3s
+cursorPointer()
+    cursor url('../cur/103.cur'), pointer
+$defaultZ = 3
+body
+    font-family Georgia, 'Times New Roman', Times, serif
+    line-height 1.5em
+    cursor url('../cur/40.cur'), auto
+    .container
+        width 80vw
+        max-width 1440px
+        margin 0 auto
+#tplink
+    border 1px solid skyblue
+    background papayawhip
+    position absolute
+    padding 3px 5px
+    color skyblue
+    display none
+    border-radius 3px
+    z-index add($defaultZ, 3)
+#header
+    background-color #222
+    border-color #080808
+    position fixed
+    right 0
+    left 0
+    z-index add($defaultZ, 2)
+    color white
+    .container
+        flex()
+        .headerRight
+            flex-x(1)
+            flex()
+            justify-content flex-end
+            .input
+                box-sizing border-box
+                padding 8px 0
+                height 50px
+                input
+                    height 100%
+                    border-radius 4px
+                    border 1px solid #ccc
+                    padding 0 8px
+                    width 250px
+                    transitionAll3()
+                    &::placeholder
+                        color #aaa
+                    &:hover
+                        cursor url('../cur/135.cur'), text
+                    &:focus
+                        box-shadow 0 0 10px #00ffff
+            .search
+                position relative
+                width 40px
+                margin-left 10px
+                .layui-icon
+                    position absolute
+                    top 50%
+                    transform translateY(-50%)
+                    font-size 26px
+                    cursorPointer()
+                    color #00B7FF
+                    border-radius 4px
+                    border 1px solid #ccc
+                    padding 2px
+                    padding-right 5px
+                    background-color wheat
+                    transitionAll3()
+                    &:hover
+                        background-color #ccc
+                        color chocolate
+        .show
+            flex()
+    a
+        color #9d9d9d
+        padding 15px 15px
+        font-size 18px
+        line-height 20px
+        transitionAll3()
+        // width fit-content
+        &:hover
+            color white
+            cursorPointer()
+#main
+    position fixed
+    left 0
+    top 50px
+    height calc(100vh - 180px)
+    width 100vw
+    overflow-y scroll
+    .container
+        box-shadow 0 2px 6px rgba(100, 100, 100, 0.3)
+        background-color transparent
+        &::after
+            content ''
+            background-repeat no-repeat
+            background-position center
+            opacity 0.3
+            -webkit-filter grayscale(100%)
+            -moz-filter grayscale(100%)
+            -ms-filter grayscale(100%)
+            -o-filter grayscale(100%)
+            filter grayscale(100%)
+            filter gray
+            position fixed
+            top 50px
+            left 0
+            width 100%
+            height 100%
+            z-index -1
+            background-image url("http://img.xjh.me/random_img.php?type=bg&ctype=acg&return=302")

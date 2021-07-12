@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+hr {
+    background-color: transparent !important;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+
+
+* {
+    box-sizing: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+*::marker {
+    display: none;
+}
+
+
+img,
+embed,
+object,
+audio,
+video {
+    height: auto;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.show::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    display: block;
+}

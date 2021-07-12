@@ -1,0 +1,30 @@
+html
+  head
+    title=title
+    block head
+      link(href='/css/all_styl.css',type='text/css',rel='stylesheet')
+      link(href='/css/reset.css',type='text/css',rel='stylesheet')
+      link(href='/css/layui.css',type='text/css',rel='stylesheet')
+      link(rel='shortcut icon' type='images/x-icon' href='/images/storm.ico')
+      link(rel='icon' type='image/vnd.microsoft.icon' href='/images/storm.ico')
+  body
+    block header
+        #header
+          .container
+            a.tplink(href='#',title='首页') 首页
+            .headerRight
+              .input
+                input(type='text' placeholder='关键词搜索 多个词语请用空格隔开',onkeydown='onEnter(event,goto,"search")')
+              .search
+                i.layui-icon.layui-icon-release
+            .show
+                a.tplink(href='#',title='注册',onclick='goto("register")') 注册
+                a.tplink(href='#',title='登录',onclick='goto("login")') 登录
+    #main
+        block content
+    block foot
+      #footer
+  script(src='/lib/layui/layui.all.js')
+  script(src='/lib/sakura.js')
+  script(src='/lib/protect.js')
+  script(src='/js/module.js')
